@@ -1,0 +1,18 @@
+﻿@page
+@model CountriesModel
+@{
+    var countries = new List<string>
+    {
+        "Ukraine",
+        "USA",
+        "Japan",
+        "Germany"
+    };
+}
+
+<ul>
+    @foreach (var country in countries)
+    {
+        <li>@country</li>
+    }
+</ul>

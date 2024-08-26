@@ -1,0 +1,25 @@
+﻿@page
+@model IndexModel
+@{
+    var random = new Random();
+    char randomLetter = (char)random.Next('A', 'Z' + 1);
+    var restaurants = new List<string>
+    {
+        "restaurant 1",
+        "restaurant 2",
+        "restaurant 3",
+        "restaurant 4"
+    };
+}
+
+
+<div class="text-center">
+    <p>@DateTime.Now.DayOfYear</p>
+    <p>@randomLetter</p>
+    <ul>
+        @foreach (var restaurant in restaurants)
+        {
+            <li>@restaurant</li>
+        }
+    </ul>
+</div>
